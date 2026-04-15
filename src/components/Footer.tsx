@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Footer = () => {
   return (
-    <footer className="py-10 border-t">
+    <footer className="py-10 border-xl">
       <div className="container">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
 
@@ -48,7 +48,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="border-t pt-6 text-center">
+        <div className="border-xl pt-6 text-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} PSR Embalagens. Todos os direitos reservados.
           </p>

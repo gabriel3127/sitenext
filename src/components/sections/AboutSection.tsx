@@ -115,8 +115,6 @@ const AboutSection = () => {
               </h2>
             </motion.div>
 
-            <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl bg-[#1A50A0]/8 blur-sm" />
-
             <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-[#1A50A0]/10">
               <motion.div style={{ y: imgY }}>
                 <Image

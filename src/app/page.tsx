@@ -1,16 +1,19 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
 import HeroSection from "@/components/sections/HeroSection"
-import SocialProof from "@/components/sections/SocialProof"
-import ProductGrid from "@/components/sections/ProductGrid"
-import AboutSection from "@/components/sections/AboutSection"
-import InstagramFeed from "@/components/sections/InstagramFeed"
-import LocationSection from "@/components/sections/LocationSection"
-import ConversionSection from "@/components/sections/ConversionSection"
-import FaqSection from "@/components/sections/FaqSection"
+import Footer from "@/components/Footer"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import MobileBottomNav from "@/components/MobileBottomNav"
+
+// Componentes abaixo do fold — carregam depois do hero
+const SocialProof       = dynamic(() => import("@/components/sections/SocialProof"))
+const ProductGrid       = dynamic(() => import("@/components/sections/ProductGrid"))
+const AboutSection      = dynamic(() => import("@/components/sections/AboutSection"))
+const InstagramFeed     = dynamic(() => import("@/components/sections/InstagramFeed"))
+const LocationSection   = dynamic(() => import("@/components/sections/LocationSection"))
+const ConversionSection = dynamic(() => import("@/components/sections/ConversionSection"))
+const FaqSection        = dynamic(() => import("@/components/sections/FaqSection"))
 
 export const metadata: Metadata = {
   title: "PSR Embalagens | Distribuidora de Embalagens em Brasília",
