@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={inter.variable}>
+      <head>
+        <link rel="preload" href="/_next/static/chunks/0bffu3~sdqvvq.css" as="style" />
+      </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   )
