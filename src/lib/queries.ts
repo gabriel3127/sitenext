@@ -1,5 +1,5 @@
 import { supabase } from './supabase'
-import type { Produto, ProdutoComRelacoes, Post, Vendedor, Setor, Categoria } from './types'
+import type { Produto, ProdutoComRelacoes, Post, Vendedor, Setor, Categoria, Subcategoria } from './types'
 
 // ─── Produtos ────────────────────────────────────────────────────────────────
 
@@ -169,13 +169,13 @@ export async function getCategorias(): Promise<Categoria[]> {
   return data ?? []
 }
 
-export async function getSubcategorias() {
+export async function getSubcategorias(): Promise<Subcategoria[]> {
   const { data, error } = await supabase
     .from("subcategorias")
     .select("id, nome, slug, categoria_id, created_at")
     .order("nome")
   if (error) throw error
-  return data ?? []
+  return (data ?? []) as Subcategoria[]
 }
 
 // ─── Vendedores ───────────────────────────────────────────────────────────────
