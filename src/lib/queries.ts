@@ -172,7 +172,7 @@ export async function getCategorias(): Promise<Categoria[]> {
 export async function getSubcategorias() {
   const { data, error } = await supabase
     .from("subcategorias")
-    .select("id, nome, slug")
+    .select("id, nome, slug, categoria_id, created_at")
     .order("nome")
   if (error) throw error
   return data ?? []
